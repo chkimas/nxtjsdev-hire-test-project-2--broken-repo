@@ -8,8 +8,9 @@ type PageProps = {
   };
 };
 
-export default function UserDetailPage({ params }: PageProps) {
-  const user = getUserById(params.id);
+export default async function UserDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const user = getUserById(id);
 
   if (!user) {
     notFound();
