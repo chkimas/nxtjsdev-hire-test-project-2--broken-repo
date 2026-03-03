@@ -1,12 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
-  @apply bg-slate-950 text-slate-100 antialiased;
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+  }
+
+  a {
+    @apply text-sky-400 hover:text-sky-300 transition-colors;
+  }
 }
-
-a {
-  @apply text-sky-400 hover:text-sky-300;
-}
-
