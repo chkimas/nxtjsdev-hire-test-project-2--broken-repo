@@ -63,7 +63,7 @@ export default function HomePage() {
         <div className="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {(users as any)?.map((user: User) => (
             <Link
-              key={(user as any).userId}
+              key={user.id}
               href={`/users/${user.id}`}
               className="group rounded-xl border border-slate-800 bg-slate-900/40 p-4 transition hover:border-sky-500/60 hover:bg-slate-900"
             >
