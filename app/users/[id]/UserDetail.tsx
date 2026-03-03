@@ -15,7 +15,7 @@ export default function UserDetail({ user }: Props) {
 
   useEffect(() => {
     setDisplayName(user.name);
-  });
+  }, [user.name]);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
